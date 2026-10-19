@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Futuro com a IA</title>
+
+    <style>
+        body {
+            background-color: #F0F4F8;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #183C63;
+            color: #FFFFFF;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 16px;
+            border-radius: 10px;
+        }
+
+        main {
+            background-color: #FFFFFF;
+            color: #183C63;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 16px;
+            border-radius: 10px;
+        }
+
+        article {
+            display: flex;
+            gap: 16px;
+            padding: 20px 0;
+            border-bottom: 1px solid #D6E0EA;
+        }
+
+        article:last-child {
+            border-bottom: none;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .artigo-autor {
+            font-weight: bold;
+            color: #53718F;
+        }
+
+        button {
+            background-color: #E8F0F8;
+            color: #183C63;
+            border: none;
+            padding: 8px 12px;
+            margin-right: 8px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        button:hover {
+            background-color: #D0E2F5;
+        }
+
+        @media (max-width: 500px) {
+            article {
+                flex-direction: column;
+            }
+
+            img {
+                width: 100%;
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🤖 O Futuro com a IA</h1>
+        <p>
+            Como será o mundo com a inteligência artificial?
+            Descubra as possibilidades e os desafios dessa revolução tecnológica!
+        </p>
+    </header>
+
+    <main>
+
+        <article>
+            <img
+                src="imagem-blog.png"
+                alt="Inteligência artificial, tecnologia e inovação no futuro">
+
+            <div>
+                <h2>Como será o futuro com a IA?</h2>
+
+                <p class="artigo-autor">
+                    Por: Maria Vitoria Alves Schmoller
+                </p>
+
+                <p>
+                    A inteligência artificial está transformando o mundo!
+                    No futuro, ela poderá ajudar na medicina, na educação,
+                    nos transportes e em diversas tarefas do nosso dia a dia.
+                    Máquinas inteligentes poderão facilitar nossas vidas,
+                    resolver problemas e nos ajudar a criar novas soluções.
+                    Mas como podemos garantir que essa tecnologia seja usada
+                    de maneira responsável?
+                </p>
+
+                <button type="button" aria-label="Curtir com coração">
+                    ❤️ <span>0</span>
+                </button>
+
+                <button type="button" aria-label="Curtir com positivo">
+                    👍 <span>0</span>
+                </button>
+            </div>
+        </article>
+
+        <article>
+            <img
+                src="imagem-blog.png"
+                alt="Robôs e seres humanos trabalhando juntos com inteligência artificial">
+
+            <div>
+                <h2>A IA vai mudar as profissões?</h2>
+
+                <p class="artigo-autor">
+                    Por: Maria Vitoria Alves Schmoller
+                </p>
+
+                <p>
+                    A inteligência artificial poderá automatizar algumas
+                    atividades e criar novas oportunidades de trabalho.
+                    Profissionais de diferentes áreas poderão usar ferramentas
+                    inteligentes para aumentar a produtividade e desenvolver
+                    novas ideias. Por isso, aprender sobre tecnologia,
+                    desenvolver o pensamento crítico e investir em novas
+                    habilidades será cada vez mais importante.
+                </p>
+
+                <button type="button" aria-label="Curtir com coração">
+                    ❤️ <span>0</span>
+                </button>
+
+                <button type="button" aria-label="Curtir com positivo">
+                    👍 <span>0</span>
+                </button>
+            </div>
+        </article>
+
+    </main>
+
+    <script>
+        const botoes = document.querySelectorAll("button");
+
+        botoes.forEach(function (botao) {
+            let curtiu = false;
+
+            botao.addEventListener("click", function () {
+                const texto = botao.querySelector("span");
+
+                if (!curtiu) {
+                    texto.textContent =
+                        Number(texto.textContent) + 1;
+                    curtiu = true;
+                } else {
+                    texto.textContent =
+                        Number(texto.textContent) - 1;
+                    curtiu = false;
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
